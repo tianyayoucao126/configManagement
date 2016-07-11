@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>configManagement</groupId>
+    <artifactId>configManagement</artifactId>
+    <version>0.0.0.1</version>
+  </parent>
+  
+  <groupId>core</groupId>
+  <artifactId>core</artifactId>
+  
+  <name>core</name>
+  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.apache.zookeeper</groupId>
+		<artifactId>zookeeper</artifactId>
+		<version>${zookeeper.version}</version>
+  	</dependency>
+  	<dependency>
+		<groupId>org.apache.curator</groupId>
+		<artifactId>curator-framework</artifactId>
+		<version>${curator.framework.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.curator</groupId>
+		<artifactId>curator-recipes</artifactId>
+		<version>${curator.recipes.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>org.apache.curator</groupId>
+		<artifactId>curator-client</artifactId>
+		<version>${curator.client.version}</version>
+	</dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+    <build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>${source.version}</source>
+					<target>${target.version}</target>
+					<encoding>${encoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
